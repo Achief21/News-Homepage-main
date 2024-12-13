@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <div class="main-nav">
+          <div class="logo">
+            <img src="assets/images/logo.svg" alt="Company logo">
+          </div>
+          <div class="nav-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">New</a></li>
+              <li><a href="#">Popular</a></li>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Categories</a></li>
+            </ul>
+          </div>
+          <div class="menu">
+            <svg width="40" height="17"  xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
+          </div>
+        </div>
+      </div>
+        <div class="menu-overlay">
+          <div class="mobile-menu">
+            <div class="menu-div">
+              <div class="cancel-menu">
+                <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
+              </div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main class="main">
+      <section class="main-section">
+        <div class="images">
+          <picture>
+            <source media="(min-width:800px)" srcset="assets/images/image-web-3-desktop.jpg">
+            <img src="assets/images/image-web-3-mobile.jpg" alt="web-3 image">
+          </picture>
+        </div>
+        <div class="card-note">
+          <header>
+            <h1>
+              The Bright Future of Web 3.0?
+            </h1>
+          </header>
+          <div class="card-paragraph">
+            <p class="card-p">
+              We dive into the next evolution of the web
+              that claims to put the power of the platforms back into the hands of the
+              people. But is it really fulfilling its promise?
+            </p>
+            <button>
+              READ MORE
+            </button>
+          </div>
+
+        </div>
+      </section>
+      <aside class="main-aside">
+        <header>
+          <h2>
+            New
+          </h2>
+        </header>
+        <section>
+          <div>
+          <header>
+            <h4>
+              Hydrogen VS
+              Electric Cars
+            </h4>
+          </header>
+          <p>
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </div>
+          <div>
+          <header>
+            <h4>
+              The Downsides
+              of AI Artistry
+            </h4>
+          </header>
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation? 
+          </p>
+        </div>
+          <div>
+          <header>
+            <h4>
+              Is VC Funding Drying Up?
+            </h4>
+          </header>
+          <p class="last-p">
+            Private funding by VC firms is down 50%
+            YOY.  We take a look at what that means.
+          </p>
+        </div>
+        </section>
+      </aside>
+    </main>
+    <section class="footer">
+      <div class="card-1">
+        <div class="card-image">
+          <img src="assets/images/image-retro-pcs.jpg" alt="Retro computer" width="200" height="254">
+        </div>
+        <div class="card-section">
+            <h2>
+              01
+            </h2>
+            <h4>
+              Reviving Retro PCs
+            </h4>
+          <p>
+            What happens
+            when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>
+      <div class="card-2">
+        <div class="card-image">
+          <img src="assets/images/image-top-laptops.jpg" alt="Computer keyboard " width="200" height="254">
+        </div>
+        <div class="card-section">
+            <h2>
+              02
+            </h2>
+            <h4>
+              Top 10 Laptop of 2022
+            </h4>
+          <p>
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>
+      <div class="card-3">
+        <div class="card-image">
+          <img src="assets/images/image-gaming-growth.jpg" alt="Computer keyboard" width="200" height="254">
+        </div>
+        <div class="card-section">
+            <h2>
+              03
+            </h2>
+          <h4>
+            The Growth of Gaming
+          </h4>
+          <p>
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+    </section>
+    <script src="JS/main.js" defer></script>
+  </body>
+</html>

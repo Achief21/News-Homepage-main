@@ -1,0 +1,79 @@
+
+.main-section{
+    width: 100%;
+
+    .card-note{
+        margin-top: 30px;
+        display: flex;
+        gap: 80px;
+        color: hsl(240, 100%, 5%);
+
+
+        h1{
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 4rem;
+            @include respond-to(xl) {
+                width: 150%;
+              }
+            @include respond-to(lg) {
+                width: 100%;
+              }
+        }
+
+
+        .card-paragraph{
+            font-size: 18px;
+            line-height: 1.8rem;
+            margin-left: 40px;
+
+            p{
+                padding: 0 40px 0 0;
+                color: #5d5f79;
+                @include respond-to(xl) {
+                    font-size: 15px;
+                    padding: 0;
+                  }
+            }
+
+            button{
+                margin-top: 20px;
+                background-color:#f15e50 ;
+                border: none;
+                padding: 12px 40px;
+                letter-spacing: 5px;
+                font-size:15px;
+                font-weight: 700;
+                color: #00001a;
+                cursor: pointer;
+
+                &:hover, &:active{
+                    background-color: #00001a;
+                    color: #fff;
+                }
+            }
+        }
+
+        @include respond-to(lg) {
+            display: grid;
+            gap: 20px;
+            h1{
+                font-size: 2.7rem;
+                line-height: 3rem;
+            }
+            .card-paragraph{
+                font-size: 15px;
+                margin-left: 0;
+                p{
+
+                    padding: 0;
+                }
+    
+                button{
+                    padding: 12px 30px;
+                }
+            }
+ 
+          }
+    }
+}

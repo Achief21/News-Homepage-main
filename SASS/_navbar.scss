@@ -1,0 +1,148 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  }
+}
+
+.nav {
+  background-color: #fff;
+  width: 100%;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      display: flex;
+      z-index: 1000;
+      pointer-events: none;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition:  opacity 0.3s ease;
+
+      .menu-div {
+        padding: 20px;
+        background-color: #fff;
+        height: 100%;
+        width: 70%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        -webkit-user-select: none;
+        user-select: none;
+
+        .cancel-menu {
+          display: flex;
+          justify-content: end;
+          margin-bottom: 6rem;
+        }
+
+        li {
+          line-height: 50px;
+        }
+        a {
+          text-decoration: none;
+          color: #00001a;
+          font-size: 22px;
+          &:hover {
+            color: hsl(5, 85%, 63%);
+          }
+          &:active {
+            color: hsla(5, 70%, 59%, 0.972);
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .menu-overlay.show .mobile-menu{
+    opacity: 1;
+    pointer-events: auto;
+  } 
+
+  .menu-overlay.show .menu-div{
+    transform: translateX(0);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .container {
+    margin: auto;
+    width: 85%;
+    @include respond-to(lg) {
+      width: 90%;
+    }
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-menu ul {
+        display: flex;
+        @include respond-to(lg) {
+          display: none;
+        }
+
+        & li {
+          font-size: 15px;
+          margin-right: 45px;
+          transition: 0.4s all ease;
+          & a {
+            text-decoration: none;
+            color: #00001a;
+            &:hover {
+              color: hsl(5, 85%, 63%);
+            }
+            &:active {
+              color: hsla(5, 70%, 59%, 0.972);
+            }
+          }
+        }
+      }
+      .menu {
+        display: none;
+
+        @include respond-to(lg) {
+          display: flex
+        }
+      }
+    }
+  }
+}
